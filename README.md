@@ -71,48 +71,6 @@ attributes: `x, y, z, nx, ny, nz`. See `resample_geometry.py` for creating an
 input `.ply` file from a mesh. For demo input data, refer to the inputs
 under `demo_data/`.
 
-To reconstruct a meshed surface given an input point cloud,
-run `reconstruct_geometry.py` as follows:
-
-```bash
-# Be sure to add root of tensorflow_graphics direectory to your PYTHONPATH
-# Assuming PWD=<path/to/teensorflow_graphics>
-export PYTHONPATH="$PWD:$PYTHONPATH"
-pushd tensorflow_graphics/projects/local_implicit_grid/
-
-# using one GPU is sufficient
-export CUDA_VISIBLE_DEVICES=0
-
-# download the model weights.
-wget https://storage.googleapis.com/local-implicit-grids/pretrained_ckpt.zip
-unzip pretrained_ckpt.zip; rm pretrained_ckpt.zip
-
-# fetch a test object and compute point cloud.
-mkdir -p demo_data
-wget https://cs.uwaterloo.ca/~c2batty/bunny_watertight.obj
-mv bunny_watertight.obj demo_data
-
-# reconstruct an object. since objects are much smaller than entire scenes,
-# we can use a smaller point number and number of optimization steps to speed
-# up.
-python reconstruct_geometry.py \
---input_ply demo_data/bunny.ply \
---part_size=0.20 --npoints=2048 --steps=3001
-
-# download more demo data for scene reconstruction.
-wget http://storage.googleapis.com/local-implicit-grids/demo_data.zip
-unzip demo_data.zip; rm demo_data.zip
-
-# reconstruct a dense scene
-python reconstruct_geometry.py \
---input_ply demo_data/living_room_33_1000_per_m2.ply \
---part_size=0.25
-
-# reconstruct a sparser scene using a larger part size
-python reconstruct_geometry.py \
---input_ply demo_data/living_room_33_100_per_m2.ply \
---part_size=0.50
-```
 
 The part size parameter controls the granularity of the local implicit grid. For
 scenes it should be in the range of 0.25 - 0.5 (meters). For objects, it depends
