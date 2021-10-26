@@ -52,6 +52,9 @@ For running use:
 
 
 ### For docker building:
+
+You can find built docker image at https://hub.docker.com/repository/docker/nenashev199/local_implict_grid
+
 ```bash
 docker build -t local_implicit_grid .
 ```
@@ -60,7 +63,7 @@ For running use:
 docker run local_implicit_grid
 ```
 
-https://hub.docker.com/repository/docker/nenashev199/local_implict_grid
+
 
 ## Development
 
