@@ -61,6 +61,7 @@ For running use:
 docker run local_implicit_grid
 ```
 
+https://hub.docker.com/repository/docker/nenashev199/local_implict_grid
 
 ## Development
 
