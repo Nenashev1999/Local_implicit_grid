@@ -1,5 +1,4 @@
 ## Local Implicit Grid Representations for 3D Scenes
-
 By: [Chiyu "Max" Jiang](http://maxjiang.ml/),
 [Avneesh Sud](https://research.google/people/105052/),
 [Ameesh Makadia](http://www.ameeshmakadia.com/index.html),
@@ -8,7 +7,7 @@ By: [Chiyu "Max" Jiang](http://maxjiang.ml/),
 [Thomas Funkhouser](https://www.cs.princeton.edu/~funk/)
 
 \[[Project Website](http://maxjiang.ml/proj/lig)\] \[[Paper PDF Preprint](https://arxiv.org/abs/2003.08981)\]
-
+Main repo: https://github.com/tensorflow/graphics/tree/master/tensorflow_graphics/projects/local_implicit_grid
 ### Introduction
 
 This repository is based on our CVPR 2020 paper:
@@ -33,7 +32,7 @@ better results than alternative approaches.
 
 Our deep learning code base is written using [Tensorflow](https://www.tensorflow.org/).
 
-## Getting started
+## Quickstart
 
 For installing you can use docker or building system
 
@@ -53,6 +52,9 @@ For running use:
 
 
 ### For docker building:
+
+You can find built docker image at https://hub.docker.com/repository/docker/nenashev199/local_implict_grid
+
 ```bash
 docker build -t local_implicit_grid .
 ```
@@ -61,6 +63,11 @@ For running use:
 docker run local_implicit_grid
 ```
 
+
+
+## Development
+
+For modifying the project the main files is reconstruct_geometry.py and reconstruct_geometry.py. This files located in core catalog. By modifying this files you can change the config of running and adding some new function for evaluation. 
 
 ### Scene reconstruction using pretrained part encoding
 Currently we are releasing the evaluation code to use our pretrained model for
