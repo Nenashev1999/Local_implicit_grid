@@ -33,7 +33,7 @@ better results than alternative approaches.
 
 Our deep learning code base is written using [Tensorflow](https://www.tensorflow.org/).
 
-## Getting started
+## Quickstart
 
 For installing you can use docker or building system
 
@@ -61,6 +61,10 @@ For running use:
 docker run local_implicit_grid
 ```
 
+
+## Development
+
+For modifying the project the main files is reconstruct_geometry.py and reconstruct_geometry.py. This files located in core catalog. By modifying this files you can change the config of running and adding some new function for evaluation. 
 
 ### Scene reconstruction using pretrained part encoding
 Currently we are releasing the evaluation code to use our pretrained model for
