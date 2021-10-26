@@ -41,7 +41,7 @@ For building you need python 3.7+, pip:
 ```bash
 pip install -r requirements.txt
 ```
-For running use:
+For running tests use:
 ```bash
 ./download.sh
 ```
