@@ -1,5 +1,4 @@
 export PYTHONPATH="$PWD:$PYTHONPATH"
-pushd .
 
 # using one GPU is sufficient
 export CUDA_VISIBLE_DEVICES=0

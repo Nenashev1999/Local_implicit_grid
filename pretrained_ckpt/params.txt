@@ -1,0 +1,26 @@
+master: 
+learning_rate: 0.0001
+lr_decay_steps: 50000000
+lr_decay_rate: 0.95
+beta: 0.9
+adam_epsilon: 1e-08
+batch_size: 32
+encoder_nf: 8
+refiner_nf: 32
+empty_space_prob: 0.001
+max_steps: 10000000
+model_dir: .
+data_workers: 16
+dataset_path:
+category: all
+bb_ratio: 0.25
+n_samples: 2048
+part_res: 32
+codelen: 32
+nettype: imnet
+losstype: bce
+tsdf: 0.011765
+norm_input: True
+grad_clip: True
+sph_norm: 0.0
+alpha_lat: 0.01

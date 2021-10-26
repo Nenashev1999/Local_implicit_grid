@@ -34,7 +34,8 @@ FLAGS = flags.FLAGS
 
 
 def normalize_mesh(mesh, in_place=True):
-  
+  if type(mesh) in [str, float, int]:
+    raise TypeError("invalid type")
   """Rescales vertex positions to lie inside unit cube."""
   scale = 1.0 / np.max(mesh.bounds[1, :] - mesh.bounds[0, :])
   centroid = mesh.centroid
@@ -50,6 +51,8 @@ def normalize_mesh(mesh, in_place=True):
 
 
 def sample_mesh(mesh):
+  if type(mesh) in [str, float, int]:
+    raise TypeError("invalid type")
   """Samples oriented points from a mesh."""
   num_samples = int(mesh.area / FLAGS.sampling_density)
   sample_pts, sample_face_ids = trimesh.sample.sample_surface(mesh, num_samples)
