@@ -7,7 +7,7 @@ By: [Chiyu "Max" Jiang](http://maxjiang.ml/),
 [Thomas Funkhouser](https://www.cs.princeton.edu/~funk/)
 
 \[[Project Website](http://maxjiang.ml/proj/lig)\] \[[Paper PDF Preprint](https://arxiv.org/abs/2003.08981)\]
-\Main repo: https://github.com/tensorflow/graphics/tree/master/tensorflow_graphics/projects/local_implicit_grid
+Main repo: https://github.com/tensorflow/graphics/tree/master/tensorflow_graphics/projects/local_implicit_grid
 ### Introduction
 
 This repository is based on our CVPR 2020 paper:
